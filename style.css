@@ -1,0 +1,895 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: "AozoraMincho";
+	background: linear-gradient(rgb(200, 200, 202), rgb(255, 255, 255));
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color:rgb(200, 200, 202);
+}
+.index {
+	margin: 0;
+	padding: 0;
+	font-family: "AozoraMincho";
+	background: linear-gradient(rgb(194, 195, 196), rgb(200, 200, 202));  /*bodyにグラデーションを設定 */
+	background-color:rgb(194, 195, 196);
+}
+.page {
+	padding: 0rem;
+}
+/* フォント読み込み設定 */
+@font-face {
+	font-family: "AozoraMincho";
+	src: url("fonts/aozoramincho-light.ttf") format("truetype");
+	font-style: normal;
+}
+
+
+.concept p {
+	font-family: "AozoraMincho";
+	font-size: 20px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+@media (max-width: 725px) {
+.concept p {
+	font-family: "AozoraMincho";
+	font-size: 17px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+}
+.notfound h1 {
+	font-family: "AozoraMincho";
+	font-weight:100;
+	font-size: 200px;
+	margin:0;
+	padding-top:10%;
+	margin-bottom: 15px;
+	text-align: center;
+}
+.notfound p {
+	font-family: "AozoraMincho";
+	font-size: 20px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+@media (max-width: 725px) {
+.concept p {
+	font-family: "AozoraMincho";
+	font-size: 17px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+}
+
+.about p {
+	font-family: "AozoraMincho";
+	font-size: 20px;
+	margin-bottom: 0px;
+	text-align: left;
+}
+.about {
+	max-width: 60%;
+	padding-top:150px;
+	padding-left:25%;
+}
+.about2 p {
+	font-family: "AozoraMincho";
+	font-size: 20px;
+	margin-bottom: 0px;
+	text-align: left;
+}
+
+.about2 {
+	max-width: 60%;
+	padding-top:5%;
+	padding-left:25%;
+}
+.access {
+	padding-top:5px;
+}
+.access p {
+	font-family: "AozoraMincho";
+	max-width: 90%;
+	font-size: 15px;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	line-height: 1.5;
+}
+
+.contact p {
+	font-family: "AozoraMincho";
+	font-size: 20px;
+	margin:0px;
+	padding-top:10px;
+	text-align: left;
+}
+.contact {
+	max-width: 60%;
+	padding-top:100px;
+	padding-left:25%;
+}
+.contact .txt p {
+	font-family: "AozoraMincho";
+	max-width: 90%;
+	font-size: 15px;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	line-height: 1.5;
+}
+.contact2 p {
+	font-family: "AozoraMincho";
+	font-size: 20px;
+	margin-bottom: 0px;
+	text-align: left;
+}
+
+.contact2 {
+	max-width: 60%;
+	padding-top:2%;
+	padding-left:25%;
+}
+.contact2-title {
+padding-bottom:10px;
+}
+.contact2 .txt p {
+	font-family: "AozoraMincho";
+	max-width: 90%;
+	font-size: 15px;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	line-height: 1.5;
+}
+.contact .form {
+	text-decoration: underline #888 0.5px;
+	color:#000;
+	font-size: 20px;
+}
+.credit {
+	max-width: 60%;
+	padding-top:3.5%;
+	padding-left:25%;
+}
+.credit p {
+	font-family: "AozoraMincho";
+	max-width: 90%;
+	font-size: 12px;
+	margin:0px;
+	padding: 2px;
+	text-align: left;
+	line-height: 1;
+}
+
+@media (max-width: 1010px) {
+.about p {
+	font-family: "AozoraMincho";
+	font-size: 15px;
+	margin-bottom: 5px;
+	text-align: left;
+}
+.about {
+	max-width: 60%;
+	padding-top:180px;
+	padding-left:22%;
+}
+.about2 p {
+	font-family: "AozoraMincho";
+	font-size: 15px;
+	margin-bottom: 0px;
+	text-align: left;
+	line-height: 1.5;
+}
+.about2 {
+	max-width: 60%;
+	padding-top:5%;
+	padding-left:22%;
+}
+.access {
+	padding-top:5px;
+}
+.access p {
+	font-family: "AozoraMincho";
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	max-width: 100%;
+}
+.contact p {
+	font-family: "AozoraMincho";
+	margin:0px;
+	padding-top:10px;
+	text-align: left;
+}
+.contact {
+	max-width: 60%;
+	padding-top:140px;
+	padding-left:22vw;
+}
+.contact .txt p {
+	font-family: "AozoraMincho";
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	max-width: 100%;
+}
+.contact2 {
+	max-width: 60%;
+	padding-top:2%;
+	padding-left:22vw;
+}
+.contact2 .txt p {
+	font-family: "AozoraMincho";
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	max-width: 100%;
+}
+.credit {
+	max-width: 60%;
+	padding-top:3.5%;
+	padding-left:22vw;
+}
+.credit p {
+	font-family: "AozoraMincho";
+	font-size: 12px;
+	margin: 2px;
+	padding: 0px;
+	text-align: left;
+	max-width: 100%;
+	line-height: 1;
+}
+}
+@media (max-width: 570px) {
+.about p {
+	font-family: "AozoraMincho";
+	font-size: 15px;
+	margin-bottom: 5px;
+	text-align: left;
+}
+.about {
+	max-width: 75%;
+	padding-top: 15vh;
+	padding-left:14%;
+}
+.about2 p {
+	font-family: "AozoraMincho";
+	font-size: 15px;
+	margin-bottom: 0px;
+	text-align: left;
+	line-height: 1.5;
+}
+.about2 {
+	max-width: 77%;
+	padding-top:5%;
+	padding-left:14%;
+}
+.access {
+	padding-top:5px;
+}
+.access p {
+	font-family: "AozoraMincho";
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	max-width: 100%;
+}
+.contact p {
+	font-family: "AozoraMincho";
+	margin:0px;
+	padding-top:10px;
+	text-align: left;
+}
+.contact {
+	max-width: 70%;
+	padding-top:110px;
+	padding-left:16vw;
+}
+.contact .txt p {
+	font-family: "AozoraMincho";
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	max-width: 100%;
+}
+.contact2 {
+	max-width: 70%;
+	padding-top:2%;
+	padding-left:16vw;
+}
+.contact2 .txt p {
+	font-family: "AozoraMincho";
+	font-size: 12px;
+	margin: 0px;
+	padding: 0px;
+	text-align: left;
+	max-width: 100%;
+}
+.credit {
+	max-width: 60%;
+	padding-top:6%;
+	padding-left:16vw;
+	padding-bottom: 30px;
+}
+.credit p {
+	font-family: "AozoraMincho";
+	font-size: 11px;
+	margin: 2px;
+	padding: 0px;
+	text-align: left;
+	max-width: 100%;
+	line-height: 1;
+}
+}
+
+.slideshow {
+	width: 100%;
+	height: 100vh;
+	object-fit: cover; /* 画面全体に画像を拡大・縮小し、アスペクト比を維持 */
+	display: block;
+	z-index: 80; /
+	overflow: hidden;
+}
+
+.footer-text {
+	position: absolute;
+	top: 95%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* コンテンツを完全に中央に配置します */
+	color: #000;
+	text-align: center;
+	z-index: 70; /* 動画の上に表示されるようにします */
+}
+.footer-text p{
+	font-size:12px;
+}
+.footer-text a{
+	font-size:12px;
+	opacity: 0.8;
+}
+.footer-text-2 {
+	position: absolute;
+	top: 95%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* コンテンツを完全に中央に配置します */
+	color: #000;
+	text-align: center;
+	z-index: 1; /* 動画の上に表示されるようにします */
+}
+@media (max-width: 768px) {
+.footer-text-2 {
+	position: absolute;
+	top: 95%;
+	left: 50%;
+	transform: translate(-50%, -50%); /* コンテンツを完全に中央に配置します */
+	color: #000;
+	text-align: center;
+	opacity: 0;
+	z-index: 1; /* 動画の上に表示されるようにします */
+}
+}
+
+.footer-text-2 p{
+	font-size:12px;
+}
+.footer-text-2 a{
+	font-size:12px;
+	opacity: 0.8;
+}
+.footer-text-2 a:hover {
+	opacity: 0.5;
+}
+.footer_fadein {
+	animation-name: footer_fadein;
+	animation-duration: 3s;
+	animation-timing-function: ease-out;
+	opacity: 0;
+}
+.footer_fadein::before {
+	content: "";
+}
+@keyframes footer_fadein {
+	0% {
+	opacity: 0;
+}
+50%{
+	opacity: 0;
+}
+	100% {
+	opacity: 0.8;
+}
+}
+.footer_fadein_2 {
+	animation-name: footer_fadein_2;
+	animation-duration: 2s;
+	animation-timing-function: ease-out;
+	opacity: 0;
+}
+.footer_fadein_2::before {
+	content: "";
+}
+@keyframes footer_fadein_2 {
+	0% {
+	opacity: 0;
+}
+	30%{
+	opacity: 0;
+}
+	100% {
+	opacity: 0.8;
+	}
+}
+footer{
+	font-size:12px;
+	text-align:center;
+	padding-bottom:50px;
+	opacity:0.8;
+}
+footer a{
+	font-size:12px;
+	opacity: 1;
+}
+footer a:hover {
+	opacity: 0.5;
+}
+.responsive {
+	padding-top:70px;
+	opacity:0;
+}
+@media (max-width: 768px) {
+.responsive {
+	opacity:0.8;
+}
+}
+/* ハンバーガーメニューのアイコン部分 */
+.menu-button {
+	position: absolute;
+	top: 20px;
+	left: 30px;
+	width: 60px;
+	height: 40px;
+	cursor: pointer;
+	z-index: 101;
+	display: block;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.5s ease, visibility 0s 0.5s; /* 表示時のアニメーションと非表示時の即時切り替え */
+}
+
+/* 新しいクラスを追加し、表示状態を定義 */
+.menu-button.visible {
+	visibility: visible;
+	opacity: 1;
+	transition-delay: 0s;
+}
+
+/* ハンバーガーメニューの線（上下の線）を疑似要素で作成 */
+.menu-button::before,
+.menu-button::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #000;
+	transition: transform 0.3s ease, top 0.3s ease, bottom 0.3s ease;
+	border-radius: 5px; 
+}
+
+/* 上の線 */
+.menu-button::before {
+	top: 10px;
+}
+
+/* 下の線 */
+.menu-button::after {
+	bottom: 10px;
+}
+.menu-button:hover::before,
+.menu-button:hover::after {
+	opacity: 0.5;
+}
+/* メニューの表示/非表示を制御する部分 */
+.menu-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	opacity: 0; 
+	visibility: hidden;
+	transition: opacity 0.5s ease, visibility 0.5s ease;
+	z-index: 100;
+}
+
+/* チェックボックスがチェックされたらメニューを表示 */
+#menu-toggle {
+	display: none;
+}
+#menu-toggle:checked ~ .menu-nav {
+	opacity: 1; 
+	visibility: visible;
+}
+
+/* チェックボックスがチェックされたらハンバーガーアイコンを×印にアニメーション */
+#menu-toggle:checked ~ .menu-button::before {
+	transform: rotate(30deg);
+	top: 18.5px;
+}
+#menu-toggle:checked ~ .menu-button::after {
+	transform: rotate(-30deg);
+	bottom: 18.5px;
+}
+nav.menu-nav ul {
+	list-style: none; /* リストの点を削除 */
+	padding: 0;      /* デフォルトのパディングをリセット */
+	margin-top: 80px;
+	margin-left: 35px;
+	font-family: sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	text-shadow: 0px 0px 10px rgb(207, 207, 209);
+}
+
+@media (max-width: 768px) {
+nav.menu-nav ul {
+	list-style: none; /* リストの点を削除 */
+	padding: 0;      /* デフォルトのパディングをリセット */
+	margin-top: 70px;
+	margin-left: 35px;
+	font-family: sans-serif;
+	font-weight: 300;
+	font-size: 22px;
+	text-shadow: 0px 0px 10px rgb(207, 207, 209);
+}
+}
+
+nav.menu-nav ul li a {
+	text-decoration: none; /* 下線を削除 */
+	color: #000;			/* リンクの色を白に変更（任意） */
+}
+.instagram_icon {
+	margin-top: 15px;
+	height: 30px;
+	width: 30px;
+}
+a {
+	transition: all 0.3s;
+	text-decoration: none; /* 下線を削除 */
+	color: #000;         /* リンクの色を白に変更（任意） */
+}
+a:hover {
+	opacity: 0.5;
+}
+
+.scroll-fade-in {
+/* 中央寄せのプロパティを削除 */
+/* display: grid; */
+/* place-items: center; */
+
+/* 60%の位置に配置するためのプロパティ */
+	position: relative; /* 子要素の基準となる位置を設定 */
+	height: 100vh;
+
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 2s ease, transform 1s ease;
+}
+
+.scroll-fade-in .concept {
+	/* 60%の位置に配置したい子要素 */
+	position: absolute;
+	top: 45%; /* 親要素の上端から45%の位置に移動 */
+	left: 50%; /* 水平方向は中央に維持 */
+	transform: translate(-50%, -50%); /* 子要素の中心が60%になるように調整 */
+    width: 80%;
+}
+
+.scroll-fade-in.active {
+	opacity: 1;
+	transform: translateY(0);
+}
+.scroll-fade-in.active {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.scroll-fade-in-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease, transform 1s ease;
+}
+
+.scroll-fade-in-2.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title {
+	padding-top: 5px;
+	padding-bottom: 30px; 
+}
+.title p {
+	font-size: 25px;
+	padding-top: 0px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+/* コンテンツ全体を囲むコンテナ */
+.container {
+	max-width: 80%;
+	padding-top :120px;
+	margin:  auto;
+	padding:right 0px;
+	display: flex;
+	flex-wrap: wrap; /* 子要素を折り返す */
+	justify-content: space-between; /* 子要素間のスペースを均等に配置 */
+}
+
+/* 各コンテンツブロック */
+.item {
+	width: calc(50% - 30px); /* 50%幅から、アイテム間の隙間を引く */
+	margin-bottom: 70px;
+	box-sizing: border-box; /* paddingやborderを幅に含める */
+}
+
+/* 画像のスタイル */
+.item img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.item a:hover {
+	opacity: 0.8;
+}
+
+/* キャプションのスタイル */
+.caption {
+	margin-top: 10px;
+	padding: 0px;
+	text-align: left;
+}
+
+.caption h3 {
+	font-size: 20px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.caption p {
+	font-size: 15px;
+}
+.caption a:hover {
+	opacity: 0.5;
+}
+/* レスポンシブ対応: 画面幅が狭い場合は1列表示にする */
+@media (max-width: 768px) {
+	.container {
+	flex-direction: column; /* 縦1列に並べる */
+	padding: 30px;
+	padding-top :120px;
+}
+
+.item {
+	width: 100%; /* 幅を100%に */
+	margin-bottom:30px;
+	}
+}
+
+.underline {
+  text-decoration: underline #888 0.5px;
+}
+.image-container img{
+	display: block;
+	width: 80%;
+	height: auto;
+	padding-top:60px;
+	padding-left:10%;
+}
+
+.artwork-caption-text {
+	max-width: 60%;
+	padding-top:0%;
+	padding-left:10%;
+}
+.artwork-caption-text h2{
+	font-size: 30px;
+	margin-top: 30px;
+	margin-bottom: 0px;
+}
+.artwork-caption-text h4{
+	font-size: 20px;
+	margin-top: 10px;   /* 上部の余白を減らす */
+	margin-bottom: 50px;/* 下部の余白を減らす */
+}
+.artwork-caption-text p{
+	font-size: 17px;
+	margin-top: 10px;   /* 上部の余白を減らす */
+	margin-bottom: 5px;/* 下部の余白を減らす */
+}
+.artwork-info-text {
+	max-width: 80%;
+	line-height: 1.7; 
+	padding-top:10px;
+	padding-bottom:5%;
+	padding-left:10%;
+}
+.artwork-info-text p{
+	font-size: 20px;
+	margin-top: 50px;   /* 上部の余白を減らす */
+	margin-bottom: 70px;
+}
+@media (max-width: 1214px) {
+.image-container img{
+	display: block;
+	width: 60%;
+	height: auto;
+	padding-top:60px;
+	padding-left:20%;
+}
+
+.artwork-caption-text {
+	max-width: 60%;
+	padding-top:0%;
+	padding-left:20%;
+}
+.artwork-caption-text h2{
+	font-size: 30px;
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+.artwork-caption-text h4{
+	font-size: 20px;
+	margin-top: 10px;   /* 上部の余白を減らす */
+	margin-bottom: 50px;/* 下部の余白を減らす */
+}
+.artwork-caption-text p{
+	font-size: 17px;
+	margin-top: 10px;   /* 上部の余白を減らす */
+	margin-bottom: 5px;/* 下部の余白を減らす */
+}
+.artwork-info-text {
+	max-width: 60%;
+	line-height: 1.7; 
+	padding-top:0px;
+	padding-bottom:5%;
+	padding-left:20%;
+}
+.artwork-info-text p{
+	font-size: 17px;
+	margin-top: 40px;   /* 上部の余白を減らす */
+	margin-bottom: 80px;
+}
+.artwork-info-text-link{
+	max-width: 60%;
+	line-height: 1.7; 
+	padding-top:0px;
+	padding-bottom:0px
+}
+}
+
+
+@media (max-width: 610px) {
+.image-container img{
+	display: block;
+	width: 57%;
+	height: auto;
+	padding-top:60px;
+	padding-left:23%;
+}
+
+.artwork-caption-text {
+	max-width: 60%;
+	padding-top:0%;
+	padding-left:23%;
+}
+.artwork-caption-text h2{
+	font-size: 25px;
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+.artwork-caption-text h4{
+	font-size: 17px;
+	margin-top: 10px;	/* 上部の余白を減らす */
+	margin-bottom: 20px;/* 下部の余白を減らす */
+}
+.artwork-caption-text p{
+	font-size: 15px;
+	margin-top: 10px;	/* 上部の余白を減らす */
+	margin-bottom: 5px;/* 下部の余白を減らす */
+}
+.artwork-info-text {
+	max-width: 60%;
+	line-height: 1.7; 
+	padding-top:0px;
+	padding-bottom:70px;
+	padding-left:23%;
+}
+.artwork-info-text p{
+	font-size: 15px;
+}
+.artwork-info-text-link{
+	max-width: 60%;
+	line-height: 1.7; 
+	padding-top:0px;
+	padding-bottom:0px;
+}
+}
+
+
+
+/* ローディング画面のスタイル */
+.loader {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+#loading-screen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(rgb(200, 200, 202), #fff);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+}
+
+.loader p {
+	font-family: "AozoraMincho", sans-serif;
+	font-size: 24px;
+	color: #000;
+	animation: pulse 1.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	50% {
+		transform: scale(1.1);
+		opacity: 0.7;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+/* プログレスバーのコンテナ */
+.progress-container {
+	width: 80%;
+	height: 2px;
+	background-color: #f3f3f3;
+	border-radius: 5px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+/* 実際に進捗を示すプログレスバー */
+.progress-bar {
+	width: 0;
+	height: 100%;
+	background-color: #757575;
+	transition: width 0.3s ease-in-out;
+}
