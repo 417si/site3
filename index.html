@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1, viewport-fit=cover" />
+<title>鏡像をうつす</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/png" href="./images/favicon.png">
+</head>
+<body class="index">
+<div id="loading-screen">
+	<div class="loader">
+		<div class="progress-container">
+			<div id="progressBar" class="progress-bar"></div>
+		</div>
+	</div>
+</div>
+<input type="checkbox" id="menu-toggle">
+<label for="menu-toggle" class="menu-button">
+	<span></span>
+</label>
+<nav class="menu-nav">
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="concept.html">Concept</a></li>
+		<li><a href="artworks.html">Artworks</a></li>
+		<li><a href="contact.html">Contact</a></li>
+		<li>
+			<a href="https://www.instagram.com/reflecting_mirror_images" target=”_blank”>
+			<img src="./images/Instagram_Glyph_Black.svg" alt="画像1の説明文" class="instagram_icon">
+			</a>
+		</li>
+	</ul>
+</nav>
+<main class="page">
+	<img id="slideshowImage" src="animation/001.png" alt="スライドショー画像" class="slideshow">
+	<div class="footer-text">
+		<a href="contact.html" class="footer_fadein">&copy; 2025 鏡像をうつす</a>
+	</div>
+</main>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+	const menuButton = document.querySelector('.menu-button');
+	setTimeout(() => {
+		menuButton.classList.add('visible');
+	}, 1000);
+
+	const images = [
+		'animation/001.png', 'animation/002.png', 'animation/003.png', 'animation/004.png',
+		'animation/005.png', 'animation/006.png', 'animation/007.png', 'animation/008.png',
+		'animation/009.png', 'animation/010.png', 'animation/011.png', 'animation/012.png',
+		'animation/013.png', 'animation/014.png', 'animation/015.png', 'animation/016.png',
+		'animation/017.png', 'animation/018.png', 'animation/019.png', 'animation/020.png',
+		'animation/021.png', 'animation/022.png', 'animation/023.png', 'animation/024.png',
+		'animation/025.png', 'animation/026.png', 'animation/027.png', 'animation/028.png',
+		'animation/029.png', 'animation/030.png', 'animation/031.png', 'animation/032.png',
+		'animation/033.png', 'animation/034.png', 'animation/035.png', 'animation/036.png',
+		'animation/037.png', 'animation/038.png', 'animation/039.png', 'animation/040.png'
+	];
+
+	const slideshowImage = document.getElementById('slideshowImage');
+	const loadingScreen = document.getElementById('loading-screen');
+	const progressBar = document.getElementById('progressBar');
+	let currentIndex = 0;
+	let imagesLoadedCount = 0;
+
+function startSlideshow() {
+    loadingScreen.style.opacity = '0';
+    loadingScreen.addEventListener('transitionend', () => {
+        loadingScreen.style.display = 'none';
+
+        // メニューボタンとフッターを表示する
+        document.querySelector('.menu-button').classList.add('visible');
+        document.querySelector('.footer_fadein').style.opacity = '0.8';
+        document.querySelector('.footer_fadein').style.animation = 'footer_fadein 3s ease-out forwards';
+    }, { once: true });
+    
+    // スライドショーのアニメーションを開始
+    const slideshowInterval = setInterval(() => {
+        currentIndex++;
+
+        if (currentIndex >= images.length) {
+            clearInterval(slideshowInterval);
+            return;
+        }
+        slideshowImage.src = images[currentIndex];
+    }, 0029);
+}
+
+	// 画像をプリロードし、プログレスバーを更新
+	images.forEach(imagePath => {
+		const img = new Image();
+		img.onload = () => {
+			imagesLoadedCount++;
+			const progressPercentage = (imagesLoadedCount / images.length) * 100;
+			progressBar.style.width = `${progressPercentage}%`;
+
+			if (imagesLoadedCount === images.length) {
+				startSlideshow(); // ここでスライドショーを開始
+			}
+		};
+		img.src = imagePath;
+	});
+});
+</script>
+</body>
+</html>
