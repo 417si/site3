@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1, viewport-fit=cover" />
-<title>鏡像をうつす</title>
+<title>鏡像をうつす_変更</title>
 <link rel="stylesheet" href="style.css" />
 <link rel="icon" type="image/png" href="./images/favicon.png">
 </head>
@@ -87,7 +87,28 @@ function startSlideshow() {
         slideshowImage.src = images[currentIndex];
     }, 0029);
 }
+// スライドショーを開始する関数
+function startSlideshow() {
+    loadingScreen.style.opacity = '0';
+    loadingScreen.addEventListener('transitionend', () => {
+        // ここにローディング画面が完全に非表示になった後に実行したい処理を記述
+        loadingScreen.style.display = 'none';
+        document.querySelector('.menu-button').classList.add('visible');
+        document.querySelector('.footer_fadein').style.opacity = '0.8';
+        document.querySelector('.footer_fadein').style.animation = 'footer_fadein 3s ease-out forwards';
+    }, { once: true });
+    
+    // スライドショーのアニメーションを開始
+    const slideshowInterval = setInterval(() => {
+        currentIndex++;
 
+        if (currentIndex >= images.length) {
+            clearInterval(slideshowInterval);
+            return;
+        }
+        slideshowImage.src = images[currentIndex];
+    }, 0029);
+}
 	// 画像をプリロードし、プログレスバーを更新
 	images.forEach(imagePath => {
 		const img = new Image();
