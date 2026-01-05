@@ -2,6 +2,8 @@ body {
     font-family: sans-serif;
     margin: 0;
     line-height: 1.6;
+    padding: 16px;
+    background: #fff;
 }
 
 nav {
@@ -26,4 +28,114 @@ nav a {
 main {
     padding: 50px 5%;
     text-align: center;
+}
+h1 {
+    font-size: 32px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+/* --- ギャラリーのレイアウト設定 --- */
+.grid {
+    display: grid;
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px; /* 画面が大きすぎるときに広がりすぎないよう制限 */
+}
+
+/* 1. デフォルト（スマートフォン）：横1列 */
+@media screen and (max-width: 767px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 2. PC（タブレット以上）：横3列 */
+@media screen and (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* --- カードと画像の設定（前回までの修正を含む） --- */
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 正方形で統一 */
+    object-fit: cover;    /* 枠いっぱいに表示 */
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* ...（以下、以前のコードと同じ）... */
+.gallery-item:hover img {
+    transform: scale(1.08);
+    filter: brightness(0.7);
+}
+
+.user-id {
+    padding: 10px 12px;
+    font-size: 13px;
+    color: #555;
+    font-weight: 600;
+    background: #fff;
+    z-index: 1;
+}
+
+.post-button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #0077ff;
+    color: #fff;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-top: 1px solid #eee;
+}
+
+/* モーダル（変更なし） */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain; /* モーダル内では画像全体を見せる */
+    animation: zoom 0.3s ease-out;
+}
+
+@keyframes zoom {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
 }
