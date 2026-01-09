@@ -1,9 +1,5 @@
 {
-  "name": "your-project-name",
-  "assets": {
-    "directory": "./", // src/ ではなく、現在の場所（./）を指定
-    "binding": "ASSETS"
-  },
-  "main": "index.html", // ここも index.html のみにする
+  "name": "my-site",
+  "pages_build_output_dir": ".",
   "compatibility_date": "2024-01-01"
 }
