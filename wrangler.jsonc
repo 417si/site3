@@ -1,5 +1,9 @@
 {
-  "name": "my-first-worker",
-  "main": "index.html",
+  "name": "your-project-name",
+  "assets": {
+    "directory": "./", // src/ ではなく、現在の場所（./）を指定
+    "binding": "ASSETS"
+  },
+  "main": "index.html", // ここも index.html のみにする
   "compatibility_date": "2024-01-01"
 }
